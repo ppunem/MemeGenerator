@@ -4,9 +4,14 @@ import styled from 'styled-components'
 export const MainContainer = styled.div`
     display:flex;
     justify-content:space-between;
+    align-items:center;
     height:100vh;
-    width:100vw;
     padding:15px;
+    padding-top:15px;
+    padding-bottom:15px;
+    padding-left:20px;
+    padding-right:20px;
+    border:1px solid green;
 `
 
 export const MainHead = styled.h1`
@@ -19,18 +24,22 @@ export const MainHead = styled.h1`
 export const Form = styled.form`
     display:flex;
     flex-direction:column;
+    border:1px solid red;
+    width:30%;
 `
 export const Label = styled.label`
     color:#7e858e;
     font-size:16px;
     font-family:"roboto";
+    margin-bottom:14px;
 `
 
 export const Input = styled.input`
     border:1px solid #5a7184;
     border-radius:7px;
     color:#7e858e;
-    margin-bottom:15px;
+    margin-bottom:20px;
+    padding:15px;
 `
 
 export const Select = styled.select`
@@ -38,6 +47,7 @@ export const Select = styled.select`
     border-radius:7px;
     color:#7e858e;
     margin-bottom:15px;
+    padding:15px;
 `
 
 export const SubmitButton = styled.button`
@@ -49,6 +59,7 @@ export const SubmitButton = styled.button`
     color:#ffffff;
     border:none;
     border-radius:7px;
+    width:35%;
 `
 
 export const BackgroundImage = styled.img`
@@ -56,15 +67,16 @@ export const BackgroundImage = styled.img`
     flex-direction:column;
     justify-content:space-between;
     align-items:center;
-    height:250px;
-    width:300px;
+    height:500px;
+    width:900px;
     padding:15px;
     background-image:url(${props => props.backgroundImageUrl});
+    bacground-size:cover;
 `
 
 export const Para = styled.p`
     color:#ffffff;
     font-family:"roboto";
     font-size:${props => props.size};
-    text-align:${props => (props.textAlign ? 'flex-start' : 'flex-end')}
+    font-weight:650;
 `
