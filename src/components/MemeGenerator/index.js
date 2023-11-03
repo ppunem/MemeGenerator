@@ -8,9 +8,8 @@ import {
   Select,
   SubmitButton,
   BackgroundImage,
-  Para
+  Para,
 } from './styledComponents'
-
 
 const fontSizesOptionsList = [
   {
@@ -88,10 +87,9 @@ class MemeGenerator extends Component {
 
     return (
       <>
-        <BackgroundImage backgroundImageUrl={url}>
-          <Para textAlign size={activeOption}>{top}</Para>
-          <Para>{bottom}</Para>
-        </BackgroundImage>
+        <BackgroundImage backgroundImageUrl={url} />
+        <Para size={activeOption}>{top}</Para>
+        <Para size={activeOption}>{bottom}</Para>
       </>
     )
   }
@@ -100,17 +98,16 @@ class MemeGenerator extends Component {
     const {activeOptionId, imageUrl, topTxt, bottomTxt} = this.state
 
     return (
-      
-        <>
-          <MainHead>Meme Generator</MainHead>
-          <MainContainer>
+      <>
+        <MainContainer>
           <Form onSubmit={this.submitForm}>
+            <MainHead>Meme Generator</MainHead>
             <Label htmlFor="imageInput">Image URL</Label>
             <Input
               type="text"
               id="imageInput"
               placeholder="Enter the Image URL"
-              onChange={this.changeImgUrl} 
+              onChange={this.changeImgUrl}
               value={imageUrl}
             />
             <Label htmlFor="topText">Top Text</Label>
@@ -118,7 +115,7 @@ class MemeGenerator extends Component {
               type="text"
               id="topText"
               placeholder="Enter the Top Text"
-              onChange={this.changeTopText} 
+              onChange={this.changeTopText}
               value={topTxt}
             />
             <Label htmlFor="bottomText">Bottom Text</Label>
@@ -126,7 +123,7 @@ class MemeGenerator extends Component {
               type="text"
               id="bottomText"
               placeholder="Enter the Bottom Text"
-              onChange={this.changeBottomText} 
+              onChange={this.changeBottomText}
               value={bottomTxt}
             />
             <Label htmlFor="fontSize">Font Size</Label>
@@ -144,7 +141,7 @@ class MemeGenerator extends Component {
             <SubmitButton type="submit">Generate</SubmitButton>
           </Form>
           {this.renderImage()}
-      </MainContainer>
+        </MainContainer>
       </>
     )
   }
