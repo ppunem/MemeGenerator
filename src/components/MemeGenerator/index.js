@@ -87,9 +87,10 @@ class MemeGenerator extends Component {
 
     return (
       <>
-        <BackgroundImage backgroundImageUrl={url} />
-        <Para size={activeOption}>{top}</Para>
-        <Para size={activeOption}>{bottom}</Para>
+        <BackgroundImage backgroundImageUrl={url}>
+          <Para size={activeOption}>{top}</Para>
+          <Para size={activeOption}>{bottom}</Para>
+        </BackgroundImage>
       </>
     )
   }
