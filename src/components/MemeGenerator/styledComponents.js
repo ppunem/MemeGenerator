@@ -67,11 +67,13 @@ export const BackgroundImage = styled.img`
     flex-direction:column;
     justify-content:space-between;
     align-items:center;
-    height:500px;
-    width:900px;
+    height:250px;
+    width:300px;
     padding:15px;
     background-image:url(${props => props.backgroundImageUrl});
     bacground-size:cover;
+    background-repeat: no-repeat;
+
 `
 
 export const Para = styled.p`
